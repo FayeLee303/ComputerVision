@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20baba8d-1201-4f04-bde6-2f8dea112a1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ComputerVision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ComputerVision.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_DCT.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_DCT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_OpenCV.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_OpenCV.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_SVM_MNIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_SVM_MNIST.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +12,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ComputerVision$test_DCT.coverage" NAME="test_DCT Coverage Results" MODIFIED="1545839410960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ComputerVision$test_SVM_MNIST.coverage" NAME="test_SVM_MNIST Coverage Results" MODIFIED="1545870134425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ComputerVision$test_DCT.coverage" NAME="test_DCT Coverage Results" MODIFIED="1545889400446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ComputerVision$test_SVM_MNIST.coverage" NAME="test_SVM_MNIST Coverage Results" MODIFIED="1545888252991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$test_OpenCV.coverage" NAME="test_OpenCV Coverage Results" MODIFIED="1545326838345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -42,23 +39,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="19963" />
+          <entry key="py" value="23725" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="19963" />
+          <entry key="Python" value="23725" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_DCT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="447" lean-forward="true" selection-start-line="447" selection-end-line="447" />
+            <state relative-caret-position="349">
+              <caret line="774" column="4" lean-forward="true" selection-start-line="774" selection-start-column="4" selection-end-line="774" selection-end-column="4" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#3936#3949#0" />
@@ -75,32 +72,33 @@
                 <element signature="e#13408#15336#0" />
                 <element signature="e#15374#17398#0" />
                 <element signature="e#14541#16172#0" />
-                <element signature="e#16562#18358#0" />
-                <marker date="1545870134419" expanded="true" signature="14122:14416" ph="..." />
-                <marker date="1545870134419" expanded="true" signature="25236:25579" ph="..." />
-                <marker date="1545870134419" expanded="false" signature="25240:25579" ph="..." />
-                <marker date="1545870134419" expanded="true" signature="25242:25579" ph="..." />
-                <marker date="1545870134419" expanded="false" signature="25585:25960" ph="..." />
+                <element signature="e#16558#18432#0" />
+                <element signature="e#18554#22406#0" />
+                <marker date="1545889495519" expanded="true" signature="14124:14418" ph="..." />
+                <marker date="1545889495519" expanded="true" signature="24846:25189" ph="..." />
+                <marker date="1545889495519" expanded="false" signature="24850:25189" ph="..." />
+                <marker date="1545889495519" expanded="true" signature="24852:25189" ph="..." />
+                <marker date="1545889495519" expanded="false" signature="25195:25570" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_SVM_MNIST.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="194" column="59" lean-forward="true" selection-start-line="194" selection-start-column="59" selection-end-line="194" selection-end-column="59" />
+            <state relative-caret-position="1003">
+              <caret line="230" column="7" selection-start-line="230" selection-start-column="7" selection-end-line="230" selection-end-column="7" />
               <folding>
-                <element signature="e#637#2033#0" />
                 <element signature="e#2080#2827#0" />
                 <element signature="e#2902#3686#0" />
                 <element signature="e#3761#4339#0" />
                 <element signature="e#4412#5191#0" />
                 <element signature="e#5264#5837#0" />
-                <element signature="e#6753#13427#0" />
-                <marker date="1545871413657" expanded="true" signature="6382:6387" ph="..." />
-                <marker date="1545871413657" expanded="true" signature="6382:6885" ph="..." />
+                <element signature="e#13461#13492#0" />
+                <element signature="e#20499#20519#0" />
+                <marker date="1545883992550" expanded="true" signature="6259:6261" ph="..." />
+                <marker date="1545883992550" expanded="true" signature="15091:16917" ph="..." />
               </folding>
             </state>
           </provider>
@@ -122,8 +120,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test_OpenCV.py" />
-        <option value="$PROJECT_DIR$/test_DCT.py" />
         <option value="$PROJECT_DIR$/test_SVM_MNIST.py" />
+        <option value="$PROJECT_DIR$/test_DCT.py" />
       </list>
     </option>
   </component>
@@ -134,10 +132,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="464" />
-    <option name="y" value="27" />
-    <option name="width" value="952" />
-    <option name="height" value="873" />
+    <option name="x" value="279" />
+    <option name="y" value="103" />
+    <option name="width" value="1830" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -182,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_SVM_MNIST">
+  <component name="RunManager" selected="Python.test_DCT">
     <configuration name="test_DCT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ComputerVision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,8 +254,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_SVM_MNIST" />
         <item itemvalue="Python.test_DCT" />
+        <item itemvalue="Python.test_SVM_MNIST" />
         <item itemvalue="Python.test_OpenCV" />
       </list>
     </recent_temporary>
@@ -285,16 +283,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="464" y="27" width="952" height="873" extended-state="0" />
+    <frame x="279" y="103" width="1830" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.31333333" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990177" weight="0.31327334" />
+      <window_info id="Structure" order="1" sideWeight="0.50098234" side_tool="true" weight="0.31333333" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.332021" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986014" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33159268" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39763778" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292232" />
@@ -353,10 +351,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_SVM_MNIST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="230" column="7" selection-start-line="230" selection-start-column="7" selection-end-line="230" selection-end-column="7" />
+          <folding>
+            <element signature="e#2080#2827#0" />
+            <element signature="e#2902#3686#0" />
+            <element signature="e#3761#4339#0" />
+            <element signature="e#4412#5191#0" />
+            <element signature="e#5264#5837#0" />
+            <element signature="e#13461#13492#0" />
+            <element signature="e#20499#20519#0" />
+            <marker date="1545883992550" expanded="true" signature="6259:6261" ph="..." />
+            <marker date="1545883992550" expanded="true" signature="15091:16917" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_DCT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="447" lean-forward="true" selection-start-line="447" selection-end-line="447" />
+        <state relative-caret-position="349">
+          <caret line="774" column="4" lean-forward="true" selection-start-line="774" selection-start-column="4" selection-end-line="774" selection-end-column="4" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#3936#3949#0" />
@@ -373,30 +389,13 @@
             <element signature="e#13408#15336#0" />
             <element signature="e#15374#17398#0" />
             <element signature="e#14541#16172#0" />
-            <element signature="e#16562#18358#0" />
-            <marker date="1545870134419" expanded="true" signature="14122:14416" ph="..." />
-            <marker date="1545870134419" expanded="true" signature="25236:25579" ph="..." />
-            <marker date="1545870134419" expanded="false" signature="25240:25579" ph="..." />
-            <marker date="1545870134419" expanded="true" signature="25242:25579" ph="..." />
-            <marker date="1545870134419" expanded="false" signature="25585:25960" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_SVM_MNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="194" column="59" lean-forward="true" selection-start-line="194" selection-start-column="59" selection-end-line="194" selection-end-column="59" />
-          <folding>
-            <element signature="e#637#2033#0" />
-            <element signature="e#2080#2827#0" />
-            <element signature="e#2902#3686#0" />
-            <element signature="e#3761#4339#0" />
-            <element signature="e#4412#5191#0" />
-            <element signature="e#5264#5837#0" />
-            <element signature="e#6753#13427#0" />
-            <marker date="1545871413657" expanded="true" signature="6382:6387" ph="..." />
-            <marker date="1545871413657" expanded="true" signature="6382:6885" ph="..." />
+            <element signature="e#16558#18432#0" />
+            <element signature="e#18554#22406#0" />
+            <marker date="1545889495519" expanded="true" signature="14124:14418" ph="..." />
+            <marker date="1545889495519" expanded="true" signature="24846:25189" ph="..." />
+            <marker date="1545889495519" expanded="false" signature="24850:25189" ph="..." />
+            <marker date="1545889495519" expanded="true" signature="24852:25189" ph="..." />
+            <marker date="1545889495519" expanded="false" signature="25195:25570" ph="..." />
           </folding>
         </state>
       </provider>

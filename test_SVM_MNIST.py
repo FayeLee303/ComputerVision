@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import math
 import struct
+import collections
 
 from sklearn.svm import SVC
 
@@ -55,9 +56,6 @@ def decode_idx3_ubyte(idx3_ubyte_file):
         images[i] = np.array(struct.unpack_from(fmt_image, bin_data, offset)).reshape((num_rows, num_cols))
         #print(images[i])
         offset += struct.calcsize(fmt_image)
-    # plt.imshow(images[i],'gray')
-    # plt.pause(0.00001)
-    # plt.show()
     print('解析images完毕！')
     return images
 
@@ -178,21 +176,6 @@ def load_test_labels(idx_ubyte_file=test_labels_idx1_ubyte_file):
 #     # print(data)
 #     return data[:, :2], data[:, -1] # 返回x,label
 
-def create_data_by_method_1(Transform,train_images,train_labels):
-    # train_images的形状60000*28*28
-    # 要输出为60000*225的矩阵
-    # 但是这里有十个类，实际上要分十堆
-
-    feature_vector = []
-    for i in renge(train_images.shape[0]):
-        img = (train_images[i])[1][2] # 得到图像
-        img = np.array(img, dtype=np.float32) / 255.0 # 转成浮点数
-        img_dct_1 = (Transform.method1(img, num=15))[0] # 处理
-        fv_1 = trans.extract_feature_vector(img_dct_1)  # 提取特征向量
-        feature_vector.append(fv_1)  # 加到列表里
-
-    # reshape
-    feature_vector = np.reshape(feature_vector,(60000,225))
 
 
 """使用非线性可分分类器"""
@@ -215,16 +198,18 @@ SMO算法
         k = k+1
         重复
 """
-
 class SVM_SMO(object):
-    def __init__(self,max_iter=100,kernel='linear'):
+    def __init__(self,positive_class_label,negetive_class_label,max_iter=100,kernel='linear'):
         self.max_iter = max_iter # 迭代次数
         self._kernel = kernel # 内部访问
 
+        self.positive_class_label = positive_class_label # 正例标签
+        self.negetive_class_label = negetive_class_label # 负例标签
+
     # 初始化变量
     def init_args(self,features,labels):
-        # self.m, self.n = features.shape # m*n的图？
-        self.m, self.n = features.shape[1], features.shape[2] # m*n的图？
+        self.m, self.n = features.shape # m*n的图？
+        # self.m, self.n = features.shape[1], features.shape[2] # m*n的图？
         self.X = features # 输入特征
         self.Y = labels # 标签
         self.b = 0.0 # 截距
@@ -339,7 +324,7 @@ class SVM_SMO(object):
             E1 = self.E[i1]
             E2 = self.E[i2]
             # SMO最优化问题的子问题沿着约束方向的未经剪辑的解是alpha2_new_unc= alpha2_old+y2(E1-E2)/h
-            # h = K11 + K22 - 2K12 = (φ(x1)-φ(x2)) 的范数！
+            # eta = K11 + K22 - 2K12 = (φ(x1)-φ(x2)) 的范数！
             eta = self.kernel(self.X[i1],self.X[i1]) + \
                   self.kernel(self.X[i2],self.X[i2]) - \
                   2*self.kernel(self.X[i1],self.X[i2])
@@ -388,25 +373,201 @@ class SVM_SMO(object):
         for i in range(self.m):
             # 决策函数f(x) = self.alpha[i] * self.Y[i] * self.kernel(data,self.X[i])
             r += self.alpha[i] * self.Y[i] * self.kernel(data,self.X[i])
-        return 1 if r > 0 else -1
+        # return 1 if r > 0 else -1
+        # 大于0返回正类标签，小于0返回负类标签
+        return self.positive_class_label if r>0 else self.negetive_class_label
 
-    # 准确率
-    def score(self,x_test,y_test):
-        right = 0
-        for i in range(len(x_test)):
-            result = self.predict(x_test[i]) # 做预测
-            if result == y_test[i]:
-                right += 1
-        print('accuracy rate:',right / len(x_test))
-        return right / len(x_test)
+    # # 准确率
+    # def score(self,x_test,y_test):
+    #     right = 0
+    #     for i in range(len(x_test)):
+    #         result = self.predict(x_test[i]) # 做预测
+    #         if result == y_test[i]:
+    #             right += 1
+    #     print('accuracy rate:',right / len(x_test))
+    #     return right / len(x_test)
+    #
+    # # 权重
+    # def _weight(self):
+    #     # linear model
+    #     yx = self.Y.reshape(-1,1)*self.X
+    #     self.w = np.dot(yx.T,self.alpha)
+    #     return self.w
 
-    # 权重
-    def _weight(self):
-        # linear model
-        yx = self.Y.reshape(-1,1)*self.X
-        self.w = np.dot(yx.T,self.alpha)
-        return self.w
 
+# 对数据进行第一种方法处理
+def create_data(Transform, images, labels,method_num=1):
+    # train_images的形状N*28*28
+    # 要输出为N*特征向量长度的矩阵
+
+    # 提取特征向量
+    feature_vector = []
+    for i in range(images.shape[0]):
+        img = images[i]  # 得到图像
+
+        img = np.array(img, dtype=np.float32) / 255.0  # 转成浮点数
+
+        fv = None
+
+        if method_num ==1:
+            img_dct_1 = (Transform.method1(img, num=15))[0]  # 处理
+            fv = trans.extract_feature_vector(img_dct_1)  # 提取特征向量
+        elif method_num ==2:
+            img_dct_2 = (Transform.method1(img, num=100))[0]  # 处理
+            fv = trans.extract_feature_vector(img_dct_2)  # 提取特征向量
+        elif method_num == 3:
+            img_dct_3 = (Transform.method1(img, num=256))[0]  # 处理
+            fv = trans.extract_feature_vector(img_dct_3)  # 提取特征向量
+        elif method_num == 4:
+            img_dct_4 = (Transform.method1(img, num=4))[0]  # 处理
+            fv = trans.extract_feature_vector(img_dct_4)  # 提取特征向量
+
+        feature_vector.append(fv)  # 加到列表里
+        if i % 5000 == 0:
+            print('提取%d张图片的特征向量' % i)
+
+    print('extract_feature_vector is done!')
+
+    temp = len(feature_vector[0][0])
+
+    feature_vector = np.reshape(feature_vector, (images.shape[0], temp))  # reshape
+
+    labels = np.reshape(labels, (-1,1))  # reshape
+    return feature_vector,labels
+
+# 分成十堆
+def divide_into_10(feature_vector,train_labels):
+    # 分成十堆
+    # 注意使用append得到的label是行向量，用的时候要转为列向量！！
+    inputs_0, label_0 = [], []
+    inputs_1, label_1 = [], []
+    inputs_2, label_2 = [], []
+    inputs_3, label_3 = [], []
+    inputs_4, label_4 = [], []
+    inputs_5, label_5 = [], []
+    inputs_6, label_6 = [], []
+    inputs_7, label_7 = [], []
+    inputs_8, label_8 = [], []
+    inputs_9, label_9 = [], []
+
+    inputs = [inputs_0, inputs_1, inputs_2, inputs_3, inputs_4, inputs_5, inputs_6, inputs_7, inputs_8, inputs_9]
+    labels = [label_0, label_1, label_2, label_3, label_4, label_5, label_6, label_7, label_8, label_9]
+    for i in range(60000):
+        if train_labels[i] == 0.0:
+            inputs[0].append(feature_vector[i])
+            labels[0].append('0')
+        elif train_labels[i] == 1.0:
+            inputs[1].append(feature_vector[i])
+            labels[1].append('1')
+        elif train_labels[i] == 2.0:
+            inputs[2].append(feature_vector[i])
+            labels[2].append('2')
+        elif train_labels[i] == 3.0:
+            inputs[3].append(feature_vector[i])
+            labels[3].append('3')
+        elif train_labels[i] == 4.0:
+            inputs[4].append(feature_vector[i])
+            labels[4].append('4')
+        elif train_labels[i] == 5.0:
+            inputs[5].append(feature_vector[i])
+            labels[5].append('5')
+        elif train_labels[i] == 6.0:
+            inputs[6].append(feature_vector[i])
+            labels[6].append('6')
+        elif train_labels[i] == 7.0:
+            inputs[7].append(feature_vector[i])
+            labels[7].append('7')
+        elif train_labels[i] == 8.0:
+            inputs[8].append(feature_vector[i])
+            labels[8].append('8')
+        elif train_labels[i] == 9.0:
+            inputs[9].append(feature_vector[i])
+            labels[9].append('9')
+
+    return inputs, labels
+
+"""
+使用SVM处理多分类问题
+做法是在任意两类样本之间设计一个SVM，因此k个类别的样本就需要设计k(k-1)/2个SVM分类器
+当对一个未知样本进行分类时，最后得票最多的类别即为该未知样本的类别
+  优点：不需要重新训练所有的SVM，只需要重新训练和增加语音样本相关的分类器。在训练单个模型时，相对速度较快。
+  缺点：所需构造和测试的二值分类器的数量关于k成二次函数增长，总训练时间和测试时间相对较慢。
+如何投票：
+    假设有10个类，就有10*9/2-45个分类器
+    对每个样本就有45个分类结果，统计分类结果里哪个票数最多就把该样本分为哪类
+"""
+
+def OVO_SVMS(Transform,train_images,train_labels,test_images,test_labels,method_num=1):
+    train_inputs, train_labels = None,None
+    test_inputs, test_labels = None,None
+    train_10_inputs, train_10_labels = None,None
+
+    if method_num ==1:
+        # 对图片进行处理
+        train_inputs,train_labels = create_data(Transform,train_images,train_labels,method_num=1)
+        test_inputs, test_labels = create_data(Transform,test_images,test_labels,method_num=1)
+
+        # 把训练样本和标签分十类，测试的不用分类
+        train_10_inputs,train_10_labels = divide_into_10(train_inputs,train_labels)
+
+
+    # 从0到9取两个数字
+    index_list = []
+    for i in range(10):
+        for j in range(10):
+            if i != j and [i, j] not in index_list and [j, i] not in index_list:
+                index_list.append([i, j])
+
+
+    svm_list = []   # 用列表存45个分类器
+
+    # 训练
+    for k in range(len(index_list)):
+
+        i,j = index_list[k][0],index_list[k][1] # 两个类的序号
+
+        temp = len(train_10_inputs[i][0]) # 特征向量长度！！
+
+        # 两类数据
+        X = np.vstack([train_10_inputs[i],train_10_inputs[j]])
+        Y = np.hstack([train_10_labels[i],train_10_labels[j]])
+        Y = np.reshape(Y,(-1,1)) # 1列
+        X = np.array(X).reshape(-1,temp)
+
+        positive_lable = train_10_labels[i][0]
+        negetive_label = train_10_labels[j][0]
+        svm = SVM_SMO(positive_lable,negetive_label,max_iter=200, )  # 创建分类器
+
+        svm.fit(X,Y) # 训练
+        print('第%d个svm分类器训练完毕'%k)
+        svm_list.append(svm) # 把分类器加到列表里
+
+    print('所有svm分类器训练完毕！')
+
+    # 测试
+    predict_labels = np.zeros((10000, 1))  # 初始化预测标签值
+
+    for i in range(10000):
+        # 每个样本用45个分类器做预测，得到45个结果，按出现次数排序
+        # 哪个结果的出现次数最高，就把该样本分到这个类里
+        temp_result = [] # 用来装45个结果
+        for j in range(len(svm_list)):
+            temp_result.append(svm_list[j].predict(test_inputs[i]))
+        # Counter是计数器，用于追踪值的出现次数
+        # count_pairs是个字典，存了值和值出现的次数
+        # 把count_pairs排序，找到出现次数最多的，就把xx分到这个类
+        count_pairs = Counter(temp_result)
+        max_count = sorted(count_pairs, key=lambda x: x)[-1]
+        predict_labels[i] = max_count
+
+    print('所有样本测试完毕！')
+
+    # 得分
+    right = 0
+    for i in range(10000):
+        if predict_labels[i] == test_labels[i]:
+            right += 1
+    print('accuracy rate:',right / 10000)
 
 if __name__ == "__main__":
     # inputs,labels = create_data()
@@ -431,11 +592,8 @@ if __name__ == "__main__":
     train_labels = load_train_labels()
     test_images = load_test_images()
     test_labels = load_test_labels()
-
-    # print('train_images',train_images.shape)
-    # print('train_labels', train_labels.shape)
-
     trans = Transform()
+    OVO_SVMS(trans,train_images,train_labels,test_images,test_labels,method_num=1)
 
     # 查看前几个数据及其标签以读取是否正确
     # for i in range(5):
@@ -503,10 +661,5 @@ if __name__ == "__main__":
     #
     # plt.show()
 
-    # svm = SVM_SMO(max_iter=200)
-    # svm.fit(train_images,train_labels)
-    # # svm.predict([4.4,3.2,1.3,0.2])
-    # svm.score(test_images,test_labels)
-
-    cv.waitKey(0)
-    cv.destroyAllWindows()
+    # cv.waitKey(0)
+    # cv.destroyAllWindows()

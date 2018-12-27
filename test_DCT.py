@@ -434,7 +434,7 @@ class Transform(object):
     # 返回降维后提取的特征向量feature_vector，是一维序列！！
     # 例如原来28*28，保留15*15的参数，得到1*225的特征向量！
     def extract_feature_vector(self,matrix):
-        print(matrix)
+        # print(matrix)
 
         feature_vector = []
         # 把不为0的部分加到特征向量里去！！
@@ -493,10 +493,6 @@ class Transform(object):
             img_dct_1_drop = cv.merge(img_dct_1_drop_list)
             img_idct_1_drop = cv.merge(img_idct_1_drop_list)
 
-            # # # 为了方便看，从YUV再转为BGR
-            # img_dct_2_drop = cv.cvtColor(img_dct_2_drop, cv.COLOR_YCrCb2BGR)
-            # img_idct_2_drop = cv.cvtColor(img_idct_2_drop, cv.COLOR_YCrCb2BGR)
-
         finally:
             # 无论是否有异常都会执行的代码
             return img_dct_1_drop, img_idct_1_drop
@@ -542,10 +538,6 @@ class Transform(object):
             # 合并
             img_dct_2_drop = cv.merge(img_dct_2_drop_list)
             img_idct_2_drop = cv.merge(img_idct_2_drop_list)
-
-            # # # 为了方便看，从YUV再转为BGR
-            # img_dct_2_drop = cv.cvtColor(img_dct_2_drop, cv.COLOR_YCrCb2BGR)
-            # img_idct_2_drop = cv.cvtColor(img_idct_2_drop, cv.COLOR_YCrCb2BGR)
 
         finally:
             # 无论是否有异常都会执行的代码
@@ -768,7 +760,19 @@ if __name__ == "__main__":
     # 1 把整张图做DCT变换，去掉一部分系数，反DCT变换
     num = 180
     img_dct_1_drop,img_idct_1_drop = trans.method1(img,num=num)
+    # 单通道
     # 展示
+    imgs = np.hstack([img_dct_1_drop, img_idct_1_drop])
+    cv.imshow("dct and idct for whole image with abandon", imgs)
+    # 多通道
+    # 为了方便看，从YUV再转为BGR
+    # 转换之前要从float转换为uint8
+    # 之前有 img = np.array(img, dtype=np.float32) / 255.0
+    # img_dct_1_drop = np.array(np.rint(img_dct_1_drop), dtype=np.uint8) # 只有一个通道里有值
+    img_idct_1_drop = np.array(np.rint(img_idct_1_drop*255), dtype=np.uint8)
+    # img_dct_1_drop = cv.cvtColor(img_dct_1_drop, cv.COLOR_YUV2BGR)
+    # img_dct_1_drop = cv.cvtColor(img_dct_1_drop, cv.COLOR_BGR2GRAY)
+    img_idct_1_drop = cv.cvtColor(img_idct_1_drop, cv.COLOR_YUV2BGR)
     imgs = np.hstack([img_dct_1_drop, img_idct_1_drop])
     cv.imshow("dct and idct for whole image with abandon", imgs)
 
@@ -776,6 +780,14 @@ if __name__ == "__main__":
     # 2 把整张图做DCT变换，Z字扫描，去掉一部分系数，合并成整个数组，反DCT变换
     num = 180*180
     img_dct_2_drop,img_idct_2_drop= trans.method2(img,num=num)
+    # 为了方便看，从YUV再转为BGR
+    # 转换之前要从float转换为uint8
+    # 之前有 img = np.array(img, dtype=np.float32) / 255.0
+    img_dct_2_drop = np.array(np.rint(img_dct_2_drop), dtype=np.uint8)
+    img_idct_2_drop = np.array(np.rint(img_idct_2_drop*255), dtype=np.uint8)
+
+    img_dct_2_drop = cv.cvtColor(img_dct_2_drop, cv.COLOR_YUV2BGR)
+    img_idct_2_drop = cv.cvtColor(img_idct_2_drop, cv.COLOR_YUV2BGR)
     # 展示
     imgs = np.hstack([img_dct_2_drop, img_idct_2_drop])
     cv.imshow("dct and idct for whole image with zigzag abandon", imgs)
@@ -783,6 +795,14 @@ if __name__ == "__main__":
     # 3 把整张图分块，每块做DCT变换，每块去掉一部分系数，合成整张图，对每一块反DCT变换
     num = 4
     img_dct_3_drop,img_idct_3_drop = trans.method3(img,num=num,isQuantify=False)
+    # 为了方便看，从YUV再转为BGR
+    # 转换之前要从float转换为uint8
+    # 之前有 img = np.array(img, dtype=np.float32) / 255.0
+    img_dct_3_drop = np.array(np.rint(img_dct_3_drop), dtype=np.uint8)
+    img_idct_3_drop = np.array(np.rint(img_idct_3_drop*255), dtype=np.uint8)
+
+    img_dct_3_drop = cv.cvtColor(img_dct_3_drop, cv.COLOR_YUV2BGR)
+    img_idct_3_drop = cv.cvtColor(img_idct_3_drop, cv.COLOR_YUV2BGR)
     # 展示
     imgs = np.hstack([img_dct_3_drop, img_idct_3_drop])
     cv.imshow("dct and idct for block with abandon", imgs)
@@ -790,6 +810,14 @@ if __name__ == "__main__":
     # 4 把整张图分块，每块做DCT变换，每块Z字扫描，去掉一部分系数，合并整个数组，合成整张图，反DCT变换
     num = 4*4
     img_dct_4_drop,img_idct_4_drop = trans.method4(img,num=num,isQuantify=False)
+    # 为了方便看，从YUV再转为BGR
+    # 转换之前要从float转换为uint8
+    # 之前有 img = np.array(img, dtype=np.float32) / 255.0
+    img_dct_4_drop = np.array(np.rint(img_dct_4_drop), dtype=np.uint8)
+    img_idct_4_drop = np.array(np.rint(img_idct_4_drop*255), dtype=np.uint8)
+
+    img_dct_4_drop = cv.cvtColor(img_dct_4_drop, cv.COLOR_YUV2BGR)
+    img_idct_4_drop = cv.cvtColor(img_idct_4_drop, cv.COLOR_YUV2BGR)
     # 展示
     imgs = np.hstack([img_dct_4_drop, img_idct_4_drop])
     cv.imshow("dct and idct for block with zigzag abandon", imgs)
