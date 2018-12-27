@@ -3,6 +3,7 @@ from test_DCT import Transform # 导入模块
 """支持向量机SMO算法"""
 import numpy as np
 import pandas as pd
+import cv2 as cv
 # from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
@@ -176,6 +177,23 @@ def load_test_labels(idx_ubyte_file=test_labels_idx1_ubyte_file):
 #             data[i, -1] = -1 # 把原数据里的0改成-1
 #     # print(data)
 #     return data[:, :2], data[:, -1] # 返回x,label
+
+def create_data_by_method_1(Transform,train_images,train_labels):
+    # train_images的形状60000*28*28
+    # 要输出为60000*225的矩阵
+    # 但是这里有十个类，实际上要分十堆
+
+    feature_vector = []
+    for i in renge(train_images.shape[0]):
+        img = (train_images[i])[1][2] # 得到图像
+        img = np.array(img, dtype=np.float32) / 255.0 # 转成浮点数
+        img_dct_1 = (Transform.method1(img, num=15))[0] # 处理
+        fv_1 = trans.extract_feature_vector(img_dct_1)  # 提取特征向量
+        feature_vector.append(fv_1)  # 加到列表里
+
+    # reshape
+    feature_vector = np.reshape(feature_vector,(60000,225))
+
 
 """使用非线性可分分类器"""
 """
@@ -370,7 +388,7 @@ class SVM_SMO(object):
         for i in range(self.m):
             # 决策函数f(x) = self.alpha[i] * self.Y[i] * self.kernel(data,self.X[i])
             r += self.alpha[i] * self.Y[i] * self.kernel(data,self.X[i])
-        return 1 if r >0 else -1
+        return 1 if r > 0 else -1
 
     # 准确率
     def score(self,x_test,y_test):
@@ -410,30 +428,85 @@ if __name__ == "__main__":
     # print(clf.score(x_test,y_test))
 
     train_images = load_train_images()
-
     train_labels = load_train_labels()
     test_images = load_test_images()
     test_labels = load_test_labels()
 
-    # print('train_images',train_images.shape,train_images[0])
+    # print('train_images',train_images.shape)
+    # print('train_labels', train_labels.shape)
 
-    print('='*50)
     trans = Transform()
-    for i in range(train_images.shape[0]):
-        img_dct_4_drop, img_idct_4_drop = trans.method4(train_images[i], num=20, split_size=7)
-        train_images[i] = img_idct_4_drop
-    print('dct transform done')
 
-    # # 查看前十个数据及其标签以读取是否正确
-    # for i in range(10):
+    # 查看前几个数据及其标签以读取是否正确
+    # for i in range(5):
     #     print(train_labels[i])
-    #     plt.imshow(train_images[i], cmap='gray')
-    #     # plt.pause(0.000001)
-    # plt.show()
+    #     img_original = train_images[i]
+    #     # 转成浮点数
+    #     img = np.array(train_images[i], dtype=np.float32) / 255.0
     #
-    # print('done')
+        # img_dct_1, img_idct_1 = trans.method1(img, num=15)
+        # img_dct_2, img_idct_2 = trans.method2(img, num=100)
+        # img_dct_3, img_idct_3 = trans.method3(img, num=4, split_size=7)
+        # img_dct_4, img_idct_4 = trans.method4(img, num=16, split_size=7)
+    #
+    #     fig = plt.figure()
+    #     plt.subplot(151)
+    #     plt.imshow(img_original,cmap='gray'),plt.title('original'),plt.xticks([]),plt.yticks([])
+    #     plt.subplot(152)
+    #     plt.imshow(img_idct_1, cmap='gray'), plt.title('DCT ULC'), plt.xticks([]), plt.yticks([])
+    #     plt.subplot(153)
+    #     plt.imshow(img_idct_2, cmap='gray'), plt.title('DCT zigzag'), plt.xticks([]), plt.yticks([])
+    #     plt.subplot(154)
+    #     plt.imshow(img_idct_3, cmap='gray'), plt.title('block based DCT ULC'), plt.xticks([]), plt.yticks([])
+    #     plt.subplot(155)
+    #     plt.imshow(img_idct_4, cmap='gray'), plt.title('block based DCT zigzag'), plt.xticks([]), plt.yticks([])
+    #
+    #     # imgs = np.hstack([img_original,img_idct_1,img_idct_2,img_idct_3,img_idct_4])
+    #     # cv.imshow(str(train_labels[i]),imgs)
+
+    # 查看变换后的特征向量的大小
+    # print(train_labels[0])
+    # img_original = train_images[0]
+    #
+    # # 转成浮点数
+    # img = np.array(img_original, dtype=np.float32) / 255.0
+    #
+    # fv_original = np.reshape(img, (1,-1)) # 原始图像特征向量
+    #
+    # img_dct_1, img_idct_1 = trans.method1(img, num=15)
+    # img_dct_2, img_idct_2 = trans.method2(img, num=100)
+    # img_dct_3, img_idct_3 = trans.method3(img, num=4, split_size=7)
+    # img_dct_4, img_idct_4 = trans.method4(img, num=16, split_size=7)
+    #
+    # fv_1 = trans.extract_feature_vector(img_dct_1)
+    # fv_2 = trans.extract_feature_vector(img_idct_2)
+    # fv_3 = trans.extract_feature_vector(img_idct_3)
+    # fv_4 = trans.extract_feature_vector(img_idct_4)
+    #
+    # print('fv_original',fv_original.shape)
+    # print('fv_1', fv_1.shape)
+    # print('fv_2', fv_2.shape)
+    # print('fv_3', fv_3.shape)
+    # print('fv_4', fv_4.shape)
+    #
+    # fig = plt.figure()
+    # plt.subplot(151)
+    # plt.imshow(img_original, cmap='gray'), plt.title('original'), plt.xticks([]), plt.yticks([])
+    # plt.subplot(152)
+    # plt.imshow(img_idct_1, cmap='gray'), plt.title('DCT ULC'), plt.xticks([]), plt.yticks([])
+    # plt.subplot(153)
+    # plt.imshow(img_idct_2, cmap='gray'), plt.title('DCT zigzag'), plt.xticks([]), plt.yticks([])
+    # plt.subplot(154)
+    # plt.imshow(img_idct_3, cmap='gray'), plt.title('block based DCT ULC'), plt.xticks([]), plt.yticks([])
+    # plt.subplot(155)
+    # plt.imshow(img_idct_4, cmap='gray'), plt.title('block based DCT zigzag'), plt.xticks([]), plt.yticks([])
+    #
+    # plt.show()
 
     # svm = SVM_SMO(max_iter=200)
     # svm.fit(train_images,train_labels)
     # # svm.predict([4.4,3.2,1.3,0.2])
     # svm.score(test_images,test_labels)
+
+    cv.waitKey(0)
+    cv.destroyAllWindows()
