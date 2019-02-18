@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20baba8d-1201-4f04-bde6-2f8dea112a1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OpenCv Test/cv_02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OpenCv Test/cv_03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OpenCv Test/cv_04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OpenCv Test/cv_05.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OpenCv Test/cv_06.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OpenCv Test/cv_07.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpenCv Test/cv_08.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenCv Test/cv_07.py" beforeDir="false" afterPath="$PROJECT_DIR$/OpenCv Test/cv_07.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,30 +22,31 @@
     <SUITE FILE_PATH="coverage/ComputerVision$test_OpenCV.coverage" NAME="test_OpenCV Coverage Results" MODIFIED="1545326838345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$m_01.coverage" NAME="m_01 Coverage Results" MODIFIED="1550056228283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PIL Test" />
     <SUITE FILE_PATH="coverage/ComputerVision$cv_05.coverage" NAME="cv_05 Coverage Results" MODIFIED="1550467681630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenCv Test" />
+    <SUITE FILE_PATH="coverage/ComputerVision$cv_08.coverage" NAME="cv_08 Coverage Results" MODIFIED="1550474364816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenCv Test" />
     <SUITE FILE_PATH="coverage/ComputerVision$test_DCT.coverage" NAME="test_DCT Coverage Results" MODIFIED="1545889400446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$m_01__1_.coverage" NAME="m_01 (1) Coverage Results" MODIFIED="1550464139777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Opencv Test" />
     <SUITE FILE_PATH="coverage/ComputerVision$cv_02.coverage" NAME="cv_02 Coverage Results" MODIFIED="1550465185463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenCv Test" />
     <SUITE FILE_PATH="coverage/ComputerVision$m_03.coverage" NAME="m_03 Coverage Results" MODIFIED="1550053796916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PIL Test" />
-    <SUITE FILE_PATH="coverage/ComputerVision$cv_07.coverage" NAME="cv_07 Coverage Results" MODIFIED="1550471480587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenCv Test" />
+    <SUITE FILE_PATH="coverage/ComputerVision$cv_07.coverage" NAME="cv_07 Coverage Results" MODIFIED="1550473493279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenCv Test" />
     <SUITE FILE_PATH="coverage/ComputerVision$test_PIL.coverage" NAME="test_PIL Coverage Results" MODIFIED="1549770634474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$cv_03.coverage" NAME="cv_03 Coverage Results" MODIFIED="1550467927826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenCv Test" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_01.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_08.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="289">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_07.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+            <state relative-caret-position="600">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -92,12 +89,13 @@
         <option value="$PROJECT_DIR$/OpenCv Test/cv_05.py" />
         <option value="$PROJECT_DIR$/OpenCv Test/cv_03.py" />
         <option value="$PROJECT_DIR$/OpenCv Test/cv_07.py" />
+        <option value="$PROJECT_DIR$/OpenCv Test/cv_08.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="583" />
-    <option name="y" value="98" />
+    <option name="x" value="562" />
+    <option name="y" value="73" />
     <option name="width" value="940" />
     <option name="height" value="827" />
   </component>
@@ -144,29 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.cv_07">
-    <configuration name="cv_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ComputerVision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OpenCv Test" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OpenCv Test/cv_01.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.cv_08">
     <configuration name="cv_03" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ComputerVision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -255,20 +231,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="cv_08" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ComputerVision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OpenCv Test" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OpenCv Test/cv_08.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.cv_03" />
       <item itemvalue="Python.cv_05" />
       <item itemvalue="Python.cv_06" />
-      <item itemvalue="Python.cv_01" />
       <item itemvalue="Python.cv_07" />
+      <item itemvalue="Python.cv_08" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cv_08" />
         <item itemvalue="Python.cv_07" />
         <item itemvalue="Python.cv_03" />
         <item itemvalue="Python.cv_05" />
         <item itemvalue="Python.cv_06" />
-        <item itemvalue="Python.cv_01" />
       </list>
     </recent_temporary>
   </component>
@@ -285,12 +283,13 @@
       <workItem from="1549763187946" duration="8791000" />
       <workItem from="1550456176686" duration="1393000" />
       <workItem from="1550464444347" duration="12000" />
-      <workItem from="1550464497801" duration="4022000" />
+      <workItem from="1550464497801" duration="5180000" />
+      <workItem from="1550473556819" duration="1612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14218000" />
+    <option name="totallyTimeSpent" value="16988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -302,7 +301,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="583" y="98" width="940" height="827" extended-state="0" />
+    <frame x="562" y="73" width="940" height="827" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990177" weight="0.3231982" />
@@ -310,7 +309,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37430167" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37430167" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39763778" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -411,15 +410,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_4.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_4.py" />
     <entry file="file://$PROJECT_DIR$/OpenCv Test/video_example.mp4">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_)5.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_)5.py" />
     <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_06.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -466,11 +461,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_07.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+        <state relative-caret-position="600">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_08.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>

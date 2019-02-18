@@ -40,12 +40,5 @@ img = cv.imread('../images/lena256.jpg',0) # 读取为灰度图像
 #
 # plt.show()
 
-"""Clahe图像增强"""
-res = cv.equalizeHist(img)
-clahe = cv.createCLAHE(clipLimit=2,tileGridSize=(10,10))
-cl1 = clahe.apply(img)
-# 绘图
-plt.subplot(131),plt.imshow(img,'gray')
-plt.subplot(132),plt.imshow(res,'gray')
-plt.subplot(133),plt.imshow(cl1,'gray')
-plt.show()
+
+
