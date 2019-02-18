@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="20baba8d-1201-4f04-bde6-2f8dea112a1a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PIL Test/m_01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PIL Test/m_02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PIL Test/m_03.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PIL Test/m_04.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +18,10 @@
     <SUITE FILE_PATH="coverage/ComputerVision$test_transformation.coverage" NAME="test_transformation Coverage Results" MODIFIED="1549766714578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$test_DCT.coverage" NAME="test_DCT Coverage Results" MODIFIED="1545889400446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$m_04.coverage" NAME="m_04 Coverage Results" MODIFIED="1550057150159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PIL Test" />
+    <SUITE FILE_PATH="coverage/ComputerVision$m_01__1_.coverage" NAME="m_01 (1) Coverage Results" MODIFIED="1550464139777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Opencv Test" />
     <SUITE FILE_PATH="coverage/ComputerVision$test_SVM_MNIST.coverage" NAME="test_SVM_MNIST Coverage Results" MODIFIED="1545888252991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$m_03.coverage" NAME="m_03 Coverage Results" MODIFIED="1550053796916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PIL Test" />
+    <SUITE FILE_PATH="coverage/ComputerVision$cv_01.coverage" NAME="cv_01 Coverage Results" MODIFIED="1550464741612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenCv Test" />
     <SUITE FILE_PATH="coverage/ComputerVision$test_OpenCV.coverage" NAME="test_OpenCV Coverage Results" MODIFIED="1545326838345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$test_PIL.coverage" NAME="test_PIL Coverage Results" MODIFIED="1549770634474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ComputerVision$m_01.coverage" NAME="m_01 Coverage Results" MODIFIED="1550056228283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PIL Test" />
@@ -23,10 +29,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PIL Test/m_04.py">
+        <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_01.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="230">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -56,12 +62,14 @@
         <option value="$PROJECT_DIR$/PIL Test/m_03.py" />
         <option value="$PROJECT_DIR$/PIL Test/m_01.py" />
         <option value="$PROJECT_DIR$/PIL Test/m_04.py" />
+        <option value="$PROJECT_DIR$/Opencv Test/m_01.py" />
+        <option value="$PROJECT_DIR$/OpenCv Test/cv_01.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="499" />
-    <option name="y" value="65" />
+    <option name="x" value="513" />
+    <option name="y" value="60" />
     <option name="width" value="922" />
     <option name="height" value="827" />
   </component>
@@ -70,7 +78,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -78,10 +85,21 @@
               <item name="ComputerVision" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
+            <path>
+              <item name="ComputerVision" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="OpenCv Test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ComputerVision" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="PIL Test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -103,7 +121,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.m_04">
+  <component name="RunManager" selected="Python.cv_01">
+    <configuration name="cv_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ComputerVision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OpenCv Test" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OpenCv Test/cv_01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="m_01 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ComputerVision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Opencv Test" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Opencv Test/m_01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="m_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ComputerVision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,64 +232,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_PIL" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ComputerVision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_PIL.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_transformation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ComputerVision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_transformation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.test_transformation" />
-      <item itemvalue="Python.test_PIL" />
       <item itemvalue="Python.m_03" />
       <item itemvalue="Python.m_01" />
       <item itemvalue="Python.m_04" />
+      <item itemvalue="Python.m_01 (1)" />
+      <item itemvalue="Python.cv_01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cv_01" />
+        <item itemvalue="Python.m_01 (1)" />
         <item itemvalue="Python.m_04" />
         <item itemvalue="Python.m_01" />
         <item itemvalue="Python.m_03" />
-        <item itemvalue="Python.test_PIL" />
-        <item itemvalue="Python.test_transformation" />
       </list>
     </recent_temporary>
   </component>
@@ -242,12 +260,14 @@
       <option name="presentableId" value="Default" />
       <updated>1545296001179</updated>
       <workItem from="1549763187946" duration="8791000" />
-      <workItem from="1550456176686" duration="534000" />
+      <workItem from="1550456176686" duration="1393000" />
+      <workItem from="1550464444347" duration="12000" />
+      <workItem from="1550464497801" duration="244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9325000" />
+    <option name="totallyTimeSpent" value="10440000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -259,15 +279,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="499" y="65" width="922" height="827" extended-state="0" />
+    <frame x="513" y="60" width="922" height="827" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990177" weight="0.31264368" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990177" weight="0.33103448" />
       <window_info id="Structure" order="1" sideWeight="0.50098234" side_tool="true" weight="0.31333333" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37430167" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37430167" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39763778" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,40 +373,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_PIL.py" />
-    <entry file="file://$PROJECT_DIR$/PIL Test/m_02.py">
+    <entry file="file://$PROJECT_DIR$/PIL Test/m_02.py" />
+    <entry file="file://$PROJECT_DIR$/PIL Test/m_01.py" />
+    <entry file="file://$PROJECT_DIR$/PIL Test/m_03.py" />
+    <entry file="file://$PROJECT_DIR$/PIL Test/m_04.py" />
+    <entry file="file://$PROJECT_DIR$/Opencv Test/m_01.py" />
+    <entry file="file://$PROJECT_DIR$/OpenCv Test/cv_01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PIL Test/m_01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PIL Test/m_03.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" selection-end-column="9" />
-          <folding>
-            <element signature="e#18#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PIL Test/m_04.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="230">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
         </state>
       </provider>
     </entry>
